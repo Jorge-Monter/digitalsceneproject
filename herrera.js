@@ -1,3 +1,4 @@
+drawAllMoons();
 // draw all moons
 function drawAllMoons() {
   for (var i = 0; i < 10;i++){

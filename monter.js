@@ -1,3 +1,5 @@
+drawAllAsteroids();
+
 //Function draws multiple asteroids
 function drawAllAsteroids(){
   for (var i = 0; i < 5; i++){

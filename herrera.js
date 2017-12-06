@@ -1,3 +1,8 @@
+dot(300);
+drawNebula();
+drawAllMoons();
+drawEarth();
+
 // Hugo: draw all moons
 function drawAllMoons() {
   for (var i = 0; i < 5;i++){
@@ -64,7 +69,7 @@ function drawNebula() {
 //Hugo: This is optional if you want to draw a big earth like in the image.
 //It is not yet finished
 function drawEarth() {
-  penColor("green");
+  penColor(rgb(20,100,1));
   penWidth(160);
   turnTo(360);
   moveTo(240,450);

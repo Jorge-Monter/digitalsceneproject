@@ -1,7 +1,10 @@
 dot(300);
+drawAllStars();
 drawNebula();
+drawAllAsteroids();
 drawAllMoons();
 drawBigPlanet();
+drawUFOS();
 
 // Hugo: draw all moons
 function drawAllMoons() {
@@ -64,6 +67,91 @@ function drawNebula() {
   moveForward(10);
   dot(10);
   }
+
+//Jorge: Function draws all asteroids
+function drawAllAsteroids(){
+  for (var i = 0; i < 3; i++){
+  penUp();
+  moveTo(randomNumber(40,300),randomNumber(40,300));
+  drawBlueAsteroid();
+  drawPowderBlueAsteroid();
+}}
+
+//Jorge: Function draws a single blue asteroid
+function drawBlueAsteroid(){
+  penDown();
+  penWidth(5);
+  penColor("blue");
+  turnTo(98);
+  drawHead();
+  drawTail();
+}
+//Jorge: Function draws a single powder blue asteroid
+function drawPowderBlueAsteroid(){
+    penDown();
+  penWidth(5);
+  penColor(rgb(76,219,255));
+  turnTo(98);
+  drawHead();
+  drawTail();
+}
+
+function drawHead() {
+  moveForward();
+  turnRight(40);
+  moveForward();
+  turnRight(130);
+  moveForward();
+  turnRight(50);
+  moveForward();
+}
+
+//Jorge: Function draws the asteroids tail
+function drawTail() {
+  penColor(rgb(76,219,255,0.7));
+  penWidth(15);
+  turnTo(305);
+  arcLeft(30,300);
+  penUp();
+}
+
+//Jorge: Function draws multiple UFOS
+function drawUFOS(){
+  for (var i = 0; i < 3; i++){
+    drawUFO();
+  }
+}
+
+//Jorge: Function draws a single UFO
+function drawUFO(){
+  penUp();
+  penColor("gray");
+  turnTo(90);
+  moveTo(randomNumber(100,260),randomNumber(100,300));
+  dot(10);
+  penColor("red");
+  dot(3);
+  moveForward(10);
+  penColor("yellow");
+  dot(3);
+  moveBackward(20);
+  penColor("green");
+  dot(3);
+}
+//Hugo: draw stars
+function drawAllStars() {
+  for (var i = 0; i < 300; i++){
+    drawStar();
+  }
+}
+
+function drawStar(){
+  penColor(rgb(255,255,255,0.2));
+  moveTo(randomNumber(20,300),randomNumber(20,420));
+  penDown();
+  dot(1);
+  penUp();
+}
 
 //Hugo: This is optional if you want to draw a planet like in the image.
 //It is not yet finished

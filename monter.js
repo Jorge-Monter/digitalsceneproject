@@ -4,17 +4,17 @@ drawAllAsteroids();
 drawAllMoons();
 drawUFOS();
 
-//Function draws multiple asteroids
+//Jorge: Function draws all asteroids
 function drawAllAsteroids(){
   for (var i = 0; i < 5; i++){
   penUp();
   moveTo(randomNumber(1,300),randomNumber(1,400));
-  drawPinkAsteroid();
   drawBlueAsteroid();
+  drawPowderBlueAsteroid();
 }}
 
-// Function draws an asteroid
-function drawPinkAsteroid(){
+//Jorge: Function draws a single blue asteroid
+function drawBlueAsteroid(){
   penDown();
   penWidth(5);
   penColor("blue");
@@ -28,8 +28,8 @@ function drawPinkAsteroid(){
   moveForward();
   drawTail();
 }
-
-function drawBlueAsteroid(){
+//Jorge: Function draws a single powder blue asteroid
+function drawPowderBlueAsteroid(){
     penDown();
   penWidth(5);
   penColor(rgb(76,219,255));
@@ -44,7 +44,7 @@ function drawBlueAsteroid(){
   drawTail();
 }
 
-
+//Jorge: Function draws the asteroids tail
 function drawTail() {
   penColor(rgb(76,219,255,0.7));
   penWidth(15);
@@ -53,14 +53,14 @@ function drawTail() {
   penUp();
 }
 
-// function draws multiple UFOS
+//Jorge: Function draws multiple UFOS
 function drawUFOS(){
   for (var i = 0; i < 4; i++){
     drawUFO();
   }
 }
 
-//function draw single UFO
+//Jorge: Function draws a single UFO
 function drawUFO(){
 penColor("grey");
 turnTo(90);

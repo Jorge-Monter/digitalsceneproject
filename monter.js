@@ -75,3 +75,17 @@ moveBackward(20);
 penColor("green");
 dot(3);
 }
+
+function drawStars(){
+  for (var i = 0; i < 300; i++){
+    drawStar();
+  }
+}
+
+function drawStar(){
+  penColor(rgb(255,255,255,0.2));
+  moveTo(randomNumber(20,300),randomNumber(20,420));
+  penDown();
+  dot(1);
+  penUp();
+}

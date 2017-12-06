@@ -1,7 +1,7 @@
 dot(300);
 drawNebula();
 drawAllMoons();
-drawEarth();
+drawBigPlanet();
 
 // Hugo: draw all moons
 function drawAllMoons() {
@@ -65,13 +65,23 @@ function drawNebula() {
   dot(10);
   }
 
-//Hugo: This is optional if you want to draw a big earth like in the image.
+//Hugo: This is optional if you want to draw a planet like in the image.
 //It is not yet finished
-function drawEarth() {
-  penColor(rgb(20,100,1));
+function drawBigPlanet() {
+  penColor(rgb(110,0,165));
   penWidth(160);
   turnTo(360);
-  moveTo(240,450);
+  moveTo(260,450);
   penDown();
   arcRight(75,100);
+  drawAurora();
 }
+  function drawAurora() {
+  penUp();
+  penColor(rgb(195,90,250,0.5));
+  penWidth(10);
+  turnTo(360);
+  moveTo(180,450);
+  penDown();
+  arcRight(80,180);
+  }

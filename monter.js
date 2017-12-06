@@ -2,7 +2,7 @@ penColor("black");
 dot(2000);
 drawAllAsteroids();
 drawAllMoons();
-drawUFO();
+drawUFOS();
 
 //Function draws multiple asteroids
 function drawAllAsteroids(){
@@ -51,4 +51,27 @@ function drawTail() {
   turnTo(305);
   arcLeft(30,300);
   penUp();
+}
+
+// function draws multiple UFOS
+function drawUFOS(){
+  for (var i = 0; i < 4; i++){
+    drawUFO();
+  }
+}
+
+//function draw single UFO
+function drawUFO(){
+penColor("grey");
+turnTo(90);
+moveTo(randomNumber(100,260),randomNumber(100,300));
+dot(15);
+penColor("red");
+dot(4);
+moveForward(10);
+penColor("yellow");
+dot(4);
+moveBackward(20);
+penColor("green");
+dot(4);
 }

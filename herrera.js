@@ -1,4 +1,5 @@
 dot(300);
+penUp();
 drawAllStars();
 drawNebula();
 drawAllAsteroids();
@@ -125,10 +126,16 @@ function drawUFOS(){
 //Jorge: Function draws a single UFO
 function drawUFO(){
   penUp();
+  drawUFOBody();
+  drawUFOLights();
+}
+function drawUFOBody() {
   penColor("gray");
   turnTo(90);
   moveTo(randomNumber(100,260),randomNumber(100,300));
   dot(10);
+}
+function drawUFOLights() {
   penColor("red");
   dot(3);
   moveForward(10);
@@ -138,13 +145,15 @@ function drawUFO(){
   penColor("green");
   dot(3);
 }
-//Hugo: draw stars
+
+//Madison: draw stars
 function drawAllStars() {
   for (var i = 0; i < 300; i++){
     drawStar();
   }
 }
 
+//Madison: draw star
 function drawStar(){
   penColor(rgb(255,255,255,0.2));
   moveTo(randomNumber(20,300),randomNumber(20,420));
@@ -153,8 +162,7 @@ function drawStar(){
   penUp();
 }
 
-//Hugo: This is optional if you want to draw a planet like in the image.
-//It is not yet finished
+//Madison: draw purple planet
 function drawBigPlanet() {
   penColor(rgb(110,0,165));
   penWidth(160);
@@ -164,6 +172,7 @@ function drawBigPlanet() {
   arcRight(75,100);
   drawAurora();
 }
+//Hugo: draw aurora
   function drawAurora() {
   penUp();
   penColor(rgb(195,90,250,0.5));
